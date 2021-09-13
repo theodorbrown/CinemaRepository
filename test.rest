@@ -1,1 +1,30 @@
 GET http://127.0.0.1:3000
+
+###
+
+GET http://127.0.0.1:3000/movie
+
+
+###
+
+POST http://127.0.0.1:3000/movie
+Content-Type: application/json
+
+{
+    "nom": "Brown",
+    "prenom": "Theodor",
+    "nationalite": ["fr","gb"] 
+}
+
+###
+POST http://127.0.0.1:3000/movie
+Content-Type: application/json
+
+{
+    "nom": "Hoang",
+    "prenom": "Tieu Ly",
+    "nationalite": ["fr"] 
+}
+
+###
+DELETE http://127.0.0.1:3000/movie/

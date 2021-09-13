@@ -1,0 +1,23 @@
+{
+  "name": "cinemarepository",
+  "version": "1.0.0",
+  "description": "web service sur les acteurs de cinema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theodorbrown/CinemaRepository.git"
+  },
+  "keywords": [
+    "cinema",
+    "acteurs"
+  ],
+  "author": "Theodor Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theodorbrown/CinemaRepository/issues"
+  },
+  "homepage": "https://github.com/theodorbrown/CinemaRepository#readme"
+}

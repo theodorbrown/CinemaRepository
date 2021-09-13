@@ -12,3 +12,7 @@ const app = express();
 app.listen(port, () => {
   console.log(`Server is running on ${port} port.`);
 })
+
+//on recupe le module main.js
+const main = require("./main");
+app.use('/', main());

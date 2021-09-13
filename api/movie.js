@@ -44,3 +44,4 @@ module.exports = (db) => {
 
   //Service web avec nodeJS, Express, Postgres
   //Le module moovie est sur route /movie
+  //http://localhost:3000

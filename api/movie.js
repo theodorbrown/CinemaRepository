@@ -29,5 +29,18 @@ module.exports = (db) => {
         })
     });
 
+    router.get('/film/:id', async (req, res) => {
+      const data = await db.any(`SELECT
+      f.titre, p.nom, p.prenom from films f 
+      inner join joue j on (f.id=j.id_film) 
+      inner join personne p on (j.id_acteur=p.id) 
+      where f.id = $1`,req.params.id);
+      res.status(200).json({ status: 'success', data: data });
+      });
+
+
     return router;
   }
+
+  //Service web avec nodeJS, Express, Postgres
+  //Le module moovie est sur route /movie

@@ -27,4 +27,9 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://127.0.0.1:3000/movie/
+DELETE http://127.0.0.1:3000/movie/a22f4d8f-dfbd-4d55-be5f-08585f62e97a
+
+
+###
+
+GET http://127.0.0.1:3000/movie/film/2b40a5ea-1394-49f7-9643-51bcff249434

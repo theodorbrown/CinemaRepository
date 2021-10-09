@@ -1,0 +1,14 @@
+POST http://127.0.0.1:9011/api/login
+content-type: application/json
+Authorization: API Token
+
+{
+  "loginId": "Danny",
+  "password": "danielbrault",
+  "applicationId": "458396b0-d890-4e73-9c5a-df7d80249a30",
+  "noJWT" : false
+}
+###
+
+GET http://100.64.98.56:3000/movie
+Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijc3ZWQ0ZTZhZSJ9.eyJhdWQiOiI0NTgzOTZiMC1kODkwLTRlNzMtOWM1YS1kZjdkODAyNDlhMzAiLCJleHAiOjE2MzM3NzUxMjYsImlhdCI6MTYzMzc3MTUyNiwiaXNzIjoiYWNtZS5jb20iLCJzdWIiOiI4ZTZlYjFkMy04Njk2LTQ2Y2UtYTAxOC0wYzEyYjllN2Q5YTUiLCJqdGkiOiI1ODBhODAyYi0zNTY2LTRhYTAtYmEwOS01NzNlMGU0ZmI2YjYiLCJhdXRoZW50aWNhdGlvblR5cGUiOiJQQVNTV09SRCIsImVtYWlsIjoiZGFuaWVsYnJhdWx0QHRlbGV3b3JtLnVzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6IkRhbm55IiwiYXBwbGljYXRpb25JZCI6IjQ1ODM5NmIwLWQ4OTAtNGU3My05YzVhLWRmN2Q4MDI0OWEzMCIsInJvbGVzIjpbImVtcGxveWUiXX0.FsMD3GN9LCv9eK05M4tmqxS6NXjupiXMWSdf4vKaPAA

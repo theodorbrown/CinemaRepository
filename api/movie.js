@@ -1,14 +1,14 @@
-module.exports = (db) => {
+module.exports = (db, authenticateToken) => {
 
     const router = require('express').Router();
   
     //racine du module
-    router.get('/', async (req, res) => {
+    router.get('/', authenticateToken, async (req, res) => {
       const data = await db.any("SELECT * from personne")
       res.status(200).json({ status: 'success', data: data });
       });
 
-    router.post('/', async (req, res) => {
+    router.post('/', authenticateToken, async (req, res) => {
       db.one("insert into personne (nom, prenom, nationalite) VALUES ($1, $2, $3) RETURNING id",
       [req.body.nom, req.body.prenom, req.body.nationalite])
         .then(function(data) {
@@ -19,7 +19,7 @@ module.exports = (db) => {
         });
     });
 
-    router.delete('/:id', (req, res) => {
+    router.delete('/:id', authenticateToken, (req, res) => {
       db.one("delete from personne where id = $1 RETURNING id", req.params.id)
         .then(function(data) {
           res.status(200).json({ status: 'success', data: data });
@@ -29,7 +29,7 @@ module.exports = (db) => {
         })
     });
 
-    router.get('/film/:id', async (req, res) => {
+    router.get('/film/:id', authenticateToken, async (req, res) => {
       const data = await db.any(`SELECT
       f.titre, p.nom, p.prenom from films f 
       inner join joue j on (f.id=j.id_film) 

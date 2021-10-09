@@ -42,7 +42,8 @@ function authenticateToken(req, res, next){
     console.log(cert);
     //si une erreur dans le décodage, 403 mauvaise authentificatio
     if(err) return res.sendStatus(403);
-    
+    //si l'usr n'est pas manager
+    if (!decoded.roles.includes("Manager")) return res.sendStatus(402);
     // si tout ok on passe à next() = la suite de la requete
     next();
   })
